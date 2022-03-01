@@ -14,10 +14,14 @@ public class jdbc {
 
 		Statement st = con.createStatement();
 		
-		String query = "Create table Customer(ID int Primary key  , SName varchar(20), SMark int )";
-		
+		String query = "Create table Customer1(ID int Primary key  , SName varchar(20), SMark int )";
+		String query1 = "Insert into Customer Value(2, 'Amit',40)";
+		String query2 = "Delete from Customer Where ID=2";
+		String query3 = "Update Customer Set SName='Shyam' Where ID=1";
 		st.executeUpdate(query);
-		System.out.println("Customer Table Create Successfully");
+		st.executeUpdate(query2);
+		st.executeUpdate(query3);
+		System.out.println("Customer1 Table Create Successfully");
 		
 	}
 
